@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/materialize.css">
+		<script src="js/angular.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		
+		<title>PROTECO</title>
+	</head>
+	<body ng-controller="cursosCtrl as curso">
+		<div class="navbar-fixed">
+			<nav>
+				<ul id="entrar" class="dropdown-content">
+					<li><a href="#!">Iniciar Sesion</a></li>
+				</ul>
+				<ul id="entrar2" class="dropdown-content">
+					<li><a href="#!">Iniciar Sesion</a></li>
+				</ul>
+				
+				<div class="nav-wrapper container">
+					<a href="index.html" class="brand-logo">PROTECO</a>
+					<ul id="nav-desk" class="right hide-on-med-and-down">
+						<li><a href="index.html">Cursos</a></li>
+						<li class="active"><a href="#">Convocatoria</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="entrar2">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+					<ul id="nav-mobile" class="side-nav">
+						<li class="active"><a href="#">Cursos</a></li>
+						<li><a href="convocatoria.html">Convocatoria</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="entrar">Entrar<i class="material-icons right">visibility</i></a></li>
+					</ul>
+					
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				</div>
+			</nav>
+		</div>
+
+		<div class="container">
+		<div class="row">
+			<div class="col l6 m12 s12">
+				<h5>CONVOCATORIA</h5>
+				<p>La Facultad de Ingeniería convoca a los alumnos de todas las carreras de Ingeniería a participar en el concurso para la selección de candidatos a su programa de becarios denominado: “Programa de Tecnología en Cómputo”.</p>
+			</div>
+			<div class="col l6 m12 s12">
+				<h5>INGRESO AL PROTECO</h5>
+				<p>Para iniciar el proceso de ingreso al PROTECO sigue los siguientes pasos: 
+<br>
+1) Imprime la solicitud de inscripción y la carta compromiso. 
+<br>
+2) Llénalos correctamente con tus datos. 
+<br>
+3) Entrégalos en las fechas indicadas en el cubículo del PROTECO. 
+<br>
+
+Documentos descargables para el ingreso al PROTECO:</p>
+
+				<a href="#">Convocatoria</a>
+				<br>
+				<a href="#">Solicitud de inscripcion</a>
+				<br>
+				<a href="#">Carta compromiso</a>
+			</div>
+			<div class="col l6 m12 s12">
+				<h5>OBJETIVO DEL PROGRAMA</h5>
+				<p>Establecer un proceso permanente, con herramientas de cómputo, para la formación de personal docente y de investigación, en las diferentes áreas de las Divisiones de la Facultad de Ingeniería, mediante la participación de los integrantes en cursos especializados y en el desarrollo de proyectos. Así también los seleccionados y subsecuentes serán semilla para nuevas generaciones de becarios.</p>
+			</div>
+		</div>
+		
+			<center><img class="materialboxed" width="200" height="300" src="img/cartel.jpg"></center>
+		</div>
+
+	</body>
+</html>
