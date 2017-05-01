@@ -6,7 +6,7 @@ Este repositorio contiene todo lo entregable para evaluacion del proyecto final 
 ### Colaboradores:
 
   - Medel Sánchez Berenice          
-  Prebecario No. 
+  Prebecario No. 20
   - Quiñones Rivera Josué Emanuel   
   Prebecario No. 3
 
