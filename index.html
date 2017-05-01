@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="myApp">
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/materialize.css">
+		<script src="js/angular.min.js"></script>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery.js"></script>
+		
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
+		
 		<title>PROTECO</title>
 	</head>
-	<body>
+	<body ng-controller="cursosCtrl as curso">
+
 		<div class="navbar-fixed">
 		<nav>
 			<ul id="entrar" class="dropdown-content">
@@ -41,8 +46,13 @@
 
 		</div>
 			<br>
-			<div class="row">
-				<div class="col l4 m6 s12">
+
+			<div class="container">
+				<h5>¡Busca el curso de tu interes!</h5>
+				<input ng-model="search" placeholder="curso">
+				
+			<div class="row" >
+				<div class="col l4 m6 s12" ng-repeat="n in cursos | filter : search">
 					<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="img/c.png" alt="C">
@@ -363,6 +373,9 @@
 				</div>
 
 			</div>
+
+			</div>
+			
 
 	</body>
 </html>
