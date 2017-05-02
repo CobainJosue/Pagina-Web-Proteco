@@ -14,7 +14,7 @@
         
         <title>PROTECO</title>
     </head>
-    <body ng-controller="cursosCtrl as curso">
+    <body ng-controller="cursosCtrl as cursos">
         <div class="navbar-fixed">
             <nav>
                 <ul id="entrar" class="dropdown-content">
@@ -42,10 +42,8 @@
             </nav>
         </div>
         <br>
-        <div class="container">
-              <h5>¡Busca el curso de tu interes!</h5>
-            <input ng-model="search" placeholder="curso">  
-           <div class="row">
+
+		 <div class="row">
                <div class="col s12">
               <div class="carousel">
                 <a class="carousel-item" href="#one!"><img src="img/python2.png"></a>
@@ -56,311 +54,31 @@
             </div>
                </div>
            </div>
+
+        <div class="container">
+              <h5>¡Busca el curso de tu interes!</h5>
+            <input ng-model="search" placeholder="curso">  
+			
+          
                     
             <div class="row" >
-                <div class="col l4 m6 s12" ng-repeat="n in cursos | filter : search">
+                <div class="col l4 m6 s12" ng-repeat="n in cursos.info | filter:search">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/c.png" alt="C">
+                            <img class="activator" ng-src={{n.imagen}} alt="C">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">C Básico<i class="material-icons right">more_vert</i></span>
+                            <span class="card-title activator grey-text text-darken-4">{{n.id}}<i class="material-icons right">more_vert</i></span>
                             <p><a href="#">Temario</a></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">C Básico<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">{{n.id}}<i class="material-icons right">close</i></span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
                         </div>
                     </div>
                 </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/c.png" alt="C">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">C Intermedio<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">C Intermedio<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/c.png" alt="C">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">C Avanzado<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">C Avanzado<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/java.png" alt="Java">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Java Básico<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Java Básico<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/java.png" alt="Java">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Java Intermedio<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Java Intermedio<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/java.png" alt="Java">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Java Avanzado<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Java Avanzado<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/raspberry.png" alt="Rasp">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Raspberry Pi Básico<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Raspberry Pi Básico<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/raspberry.png" alt="Rasp">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Raspberry Pi Intermedio<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Raspberry Pi Intermedio<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/raspberry.png" alt="Rasp">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Raspberry Pi Avanzado<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Raspberry Pi Avanzado<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/inteligencia.png" alt="Inteligencia Artificial">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Inteligencia Artificial Básico<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Inteligencia Artificial Básico<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/inteligencia.png" alt="Inteligencia Artificial">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Inteligencia Artificial Intermedio<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Inteligencia Artificial Intermedio<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/inteligencia.png" alt="Inteligencia Artificial">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Inteligencia Artificial Avanzado<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Inteligencia Artificial Avanzado<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/matlab.png" alt="Matlab">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Matlab Básico<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Matlab Básico<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/matlab.png" alt="Matlab">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Matlab Intermedio<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Matlab Intermedio<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/matlab.png" alt="Matlab">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Matlab Avanzado<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Matlab Avanzado<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/cmasmas.png" alt="C++">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">C++ Básico<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">C++ Básico<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/cmasmas.png" alt="C++">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">C++ Intermedio<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">C++ Intermedio<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/cmasmas.png" alt="C++">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">C++ Avanzado<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">C++ Avanzado<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/python.png" alt="Python">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Python Básico<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Python Básico<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l4 m6 s12">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/python.png" alt="Python">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Python Intermedio<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Python Intermedio<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+               
+        </div>
         </div>
     </body>
     <script type="text/javascript">
