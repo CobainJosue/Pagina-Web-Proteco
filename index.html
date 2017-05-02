@@ -1,89 +1,98 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="myApp">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/materialize.css">
-        <script src="js/angular.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/jquery.js"></script>
-        
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        
-        <title>PROTECO</title>
-    </head>
-    <body ng-controller="cursosCtrl as cursos">
-        <div class="navbar-fixed">
-            <nav>
-                <ul id="entrar" class="dropdown-content">
-                    <li><a href="#!">Iniciar Sesion</a></li>
-                </ul>
-                <ul id="entrar2" class="dropdown-content">
-                    <li><a href="#!">Iniciar Sesion</a></li>
-                </ul>
-                
-                <div class="nav-wrapper container">
-                    <a href="#" class="brand-logo">PROTECO</a>
-                    <ul id="nav-desk" class="right hide-on-med-and-down">
-                        <li class="active"><a href="#">Cursos</a></li>
-                        <li><a href="convocatoria.html">Convocatoria</a></li>
-                        <li><a class="dropdown-button" href="#!" data-activates="entrar2">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
-                    </ul>
-                    <ul id="nav-mobile" class="side-nav">
-                        <li class="active"><a href="#">Cursos</a></li>
-                        <li><a href="convocatoria.html">Convocatoria</a></li>
-                        <li><a class="dropdown-button" href="#!" data-activates="entrar">Entrar<i class="material-icons right">visibility</i></a></li>
-                    </ul>
-                    
-                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-                </div>
-            </nav>
-        </div>
-        <br>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/materialize.css">
+		<script src="js/angular.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		
+		<title>PROTECO</title>
+	</head>
+	<body ng-controller="cursosCtrl as cursos">
 
-		 <div class="row">
-               <div class="col s12">
-              <div class="carousel">
-                <a class="carousel-item" href="#one!"><img src="img/python2.png"></a>
-                <a class="carousel-item" href="#two!"><img src="img/c.png"></a>
-                <a class="carousel-item" href="#three!"><img src="img/java2.png"></a>
-                <a class="carousel-item" href="#four!"><img src="img/raspberry2.png"></a>
-                <a class="carousel-item" href="#five!"><img src="img/matlab2.png"></a>
-            </div>
-               </div>
-           </div>
 
-        <div class="container">
-              <h5>¡Busca el curso de tu interes!</h5>
-            <input ng-model="search" placeholder="curso">  
+		<div class="navbar-fixed">
+			<nav>
+				<ul id="entrar" class="dropdown-content">
+					<li><a href="#!">Iniciar Sesion</a></li>
+				</ul>
+				<ul id="entrar2" class="dropdown-content">
+					<li><a href="#!">Iniciar Sesion</a></li>
+				</ul>
+				
+				<div class="nav-wrapper container">
+					<a href="#" class="brand-logo">PROTECO</a>
+					<ul id="nav-desk" class="right hide-on-med-and-down">
+						<li class="active"><a href="#">Cursos</a></li>
+						<li><a href="convocatoria.html">Convocatoria</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="entrar2">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+					<ul id="nav-mobile" class="side-nav">
+						<li class="active"><a href="#">Cursos</a></li>
+						<li><a href="convocatoria.html">Convocatoria</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="entrar">Entrar<i class="material-icons right">visibility</i></a></li>
+					</ul>
+					
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				</div>
+			</nav>
+		</div>
+		<br>
+		<center><h3>¡CHECA NUESTRAS REDES!</h3></center>
+		<div class="container row">
+			<div class="col l6 m8 s8">
+				<a class="twitter-timeline" data-width="500" data-height="500" data-theme="dark" href="https://twitter.com/proteco">Tweets by proteco</a> <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+			<div class="col l6 m8 s8">
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fproteco%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="carousel">
+					<a class="carousel-item" href="#one!"><img src="img/python2.png"></a>
+					<a class="carousel-item" href="#two!"><img src="img/c.png"></a>
+					<a class="carousel-item" href="#three!"><img src="img/java2.png"></a>
+					<a class="carousel-item" href="#four!"><img src="img/raspberry2.png"></a>
+					<a class="carousel-item" href="#five!"><img src="img/matlab2.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h5>¡Busca el curso de tu interes!</h5>
+			<input ng-model="search" placeholder="curso">
 			
-          
-                    
-            <div class="row" >
-                <div class="col l4 m6 s12" ng-repeat="n in cursos.info | filter:search">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" ng-src={{n.imagen}} alt="C">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{n.id}}<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Temario</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{n.id}}<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
-                        </div>
-                    </div>
-                </div>
-               
-        </div>
-        </div>
-    </body>
-    <script type="text/javascript">
-          $('.carousel').carousel();
-     // $('.carousel.carousel-slider').carousel({full_Width: true});
-    //$('.carousel.carousel-slider').carousel({full_width: true});
-    </script>
+			
+			
+			<div class="row" >
+				<div class="col l4 m6 s12" ng-repeat="n in cursos.info | filter:search">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" ng-src={{n.imagen}} alt="C">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">{{n.id}}<i class="material-icons right">more_vert</i></span>
+							<p><a href="#">Temario</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">{{n.id}}<i class="material-icons right">close</i></span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, reprehenderit, facilis! Placeat, facilis, dignissimos? Quis in incidunt modi impedit labore sequi enim tempore, voluptate quasi, ab laboriosam natus alias, fugit!</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	$('.carousel').carousel();
+	// $('.carousel.carousel-slider').carousel({full_Width: true});
+	//$('.carousel.carousel-slider').carousel({full_width: true});
+	</script>
 </html>
