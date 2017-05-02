@@ -10,12 +10,4 @@ card{
 p{
 	text-align: justify;
 }
-P.logos{
-	text-align: center;
-}
 
-img.logos{
-	width:200px;
-	height: 500px;
-	padding-left: 20px;
-}

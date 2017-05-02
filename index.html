@@ -42,40 +42,21 @@
             </nav>
         </div>
         <br>
-                    <div class="container">
-
-            <div class="row">
-                <div class="col s12">
-                    <div class="carousel carousel-slider center" data-indicators="true">
-                        <div class="carousel-item orange white-text" href="#one!">
-                            <h2>Conoce Python!</h2>
-                            <p class="white-text logos">Sencillo, legible y de sintaxis precisa.</p>
-                            <img class="logos" src="img/python2.png" height="100px" width="100px">                        
-                            </div>
-                        <div class="carousel-item purple white-text" href="#two!">
-                            <h2>Aprende Java</h2>
-                            <p class="white-text logos">El lenguaje de programación orientada a Objetos más popular</p>
-                            <img class="logos" src="img/java2.png" height="100px" width="100px" >                        
-
-                        </div>
-                        <div class="carousel-item blue white-text" href="#three!">
-                            <h2>Aprende Matlab!</h2>
-                            <p class="white-text logos">Es muy útil para fines científicos e ingenieriles</p>
-                            <img class="logos" src="img/matlab2.png" height="100px" width="100px" >                     
-
-                        </div>
-                        <div class="carousel-item pink white-text" href="#four!">
-                        <h2>C</h2>
-                            <p class="white-text logos">Programador que se respeta, sabe C.</p>
-                            <img class="logos" src="img/c.png" height="100px" width="100px">   
-                                            
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+              <h5>¡Busca el curso de tu interes!</h5>
+            <input ng-model="search" placeholder="curso">  
+           <div class="row">
+               <div class="col s12">
+              <div class="carousel">
+                <a class="carousel-item" href="#one!"><img src="img/python2.png"></a>
+                <a class="carousel-item" href="#two!"><img src="img/c.png"></a>
+                <a class="carousel-item" href="#three!"><img src="img/java2.png"></a>
+                <a class="carousel-item" href="#four!"><img src="img/raspberry2.png"></a>
+                <a class="carousel-item" href="#five!"><img src="img/matlab2.png"></a>
             </div>
-
-            <h5>¡Busca el curso de tu interes!</h5>
-            <input ng-model="search" placeholder="curso">            
+               </div>
+           </div>
+                    
             <div class="row" >
                 <div class="col l4 m6 s12" ng-repeat="n in cursos | filter : search">
                     <div class="card">
@@ -383,6 +364,8 @@
         </div>
     </body>
     <script type="text/javascript">
-    $('.carousel.carousel-slider').carousel({full_width: true});
+          $('.carousel').carousel();
+     // $('.carousel.carousel-slider').carousel({full_Width: true});
+    //$('.carousel.carousel-slider').carousel({full_width: true});
     </script>
 </html>
