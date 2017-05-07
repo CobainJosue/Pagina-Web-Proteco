@@ -3,42 +3,65 @@
 <head>
 	<title>Logeos</title>
 </head>
+<link rel="stylesheet" href="css/materialize.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
 <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD130c_iXYVJYU6sdzQfAF11wxN5qdcpgM",
-    authDomain: "logeo-4b50c.firebaseapp.com",
-    databaseURL: "https://logeo-4b50c.firebaseio.com",
-    projectId: "logeo-4b50c",
-    storageBucket: "logeo-4b50c.appspot.com",
-    messagingSenderId: "371426756180"
-  };
-  firebase.initializeApp(config);
-</script>
+<script type="text/javascript" src="js/InicializaFirebase.js"></script>
 
 
-<script>
-   window.fbAsyncInit = function() {
-      FB.init({
-         appId      : '1544607528883169',
-         xfbml      : true,
-         version    : 'v2.9'
-      });
-   };
-
-   (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-	
-</script>
-<script type="text/javascript" src="js/logeoFacebook.js">	</script>
 <body>
-	<button onclick = "facebookSignin()">Facebook Signin</button>
-	<button onclick = "facebookSignout()">Facebook Signout</button>
+	<div class="navbar-fixed">
+			<nav>
+				<ul id="entrar" class="dropdown-content">
+					<li><a href="login.html">Iniciar Sesion</a></li>
+				</ul>
+				<ul id="entrar2" class="dropdown-content">
+					<li><a href="login.html">Iniciar Sesion</a></li>
+				</ul>
+				
+				<div class="nav-wrapper container">
+					<a href="#" class="brand-logo">PROTECO</a>
+					<ul id="nav-desk" class="right hide-on-med-and-down">
+						<li class="active"><a href="#">Cursos</a></li>
+						<li><a href="convocatoria.html">Convocatoria</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="entrar2">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+					<ul id="nav-mobile" class="side-nav">
+						<li class="active"><a href="#">Cursos</a></li>
+						<li><a href="convocatoria.html">Convocatoria</a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="entrar">Entrar<i class="material-icons right">visibility</i></a></li>
+					</ul>
+					
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				</div>
+			</nav>
+		</div>
+		<br>
+		<center>
+		<section id="GrupoBotones">
+		<button id="btn-facebook">Ingresa facebook</button>
+		<button id="btn-twitter">Twitter Signin</button>
+		<button id="btn-github">Github Sigin</button>
+	</section></center>
+	<div class="container">
+		<div class="row">
+			<!--<a href="#modalInicio" class="waves-effect waves-orange btn modal-trigger">Modal</a>-->
+			<div id="modalInicio" class="modal">
+				<div class="model-content">
+					<h4>Bienvenido</h4>
+					<p id="MensajeBienvenida"></p>
+				</div>
+				<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
 </body>
-</html>
+<script type="text/javascript" src="js/logeoFacebook.js"></script>
+<script type="text/javascript" src="js/logeoTwitter.js"></script>
+<script type="text/javascript" src="js/logeoGithub.js"></script>
