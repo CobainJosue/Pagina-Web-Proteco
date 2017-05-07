@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logeos</title>
+</head>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD130c_iXYVJYU6sdzQfAF11wxN5qdcpgM",
+    authDomain: "logeo-4b50c.firebaseapp.com",
+    databaseURL: "https://logeo-4b50c.firebaseio.com",
+    projectId: "logeo-4b50c",
+    storageBucket: "logeo-4b50c.appspot.com",
+    messagingSenderId: "371426756180"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+<script>
+   window.fbAsyncInit = function() {
+      FB.init({
+         appId      : '1544607528883169',
+         xfbml      : true,
+         version    : 'v2.9'
+      });
+   };
+
+   (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+	
+</script>
+<script type="text/javascript" src="js/logeoFacebook.js">	</script>
+<body>
+	<button onclick = "facebookSignin()">Facebook Signin</button>
+	<button onclick = "facebookSignout()">Facebook Signout</button>
+</body>
+</html>
