@@ -1,16 +1,96 @@
 nav{
-	background-color: #808E7F;
+	background-color: #797070;
 }
 
+footer.page-footer {
+    background-color: #797070;
+}
 card{
 	padding: 100px;
 	margin: 100px;
 }
-
+div#objetivo{
+	margin-top: 150px;
+}
+h5,h3,h4{
+	color: #4CA6D3;
+}
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(51, 51, 51, 0.08);
+    width: 1000px;
+}
 p{
 	text-align: justify;
 }
-
+p#MensajeBienvenida{
+	color: #0A0F57;
+}
+h4#modelTitulo{
+	color: #2C015D;
+}
+h3#Logeo{
+	color:#3E3770;
+}
+.contieneBotones{
+	padding: 100px;
+	margin: 0px;	
+	width: 450px;
+}
+button#btn-facebook{
+	background-color: #3B5998;
+	color: #ffffff;
+	padding-bottom:20px;
+}
+button#btn-twitter{
+	background-color: #45B0E3;
+	color: #ffffff;
+		padding-bottom:20px;
+}
+button#btn-github{
+	background-color: #DE4C34;
+	color: #ffffff;
+		padding-bottom:20px;
+}
 .parallax-container {
       height: 300px;
     }
+.span {
+	margin-top: 10.4%;
+	display: block;
+	width: 100%;
+	background: #3B5998;
+
+}
+.span img {
+	background:#354F88;
+	padding: 7px;
+	float: left;
+}
+
+.span1 {
+	margin-top: 9%;
+	width: 100%;
+	background: #45B0E3;
+
+}
+.span1 img {
+	background: #40A2D1;
+	padding: 7px;
+	float: left;
+}
+
+.span2 {
+	margin-top: 9%;
+	width: 100%;
+	background: #DE4C34;
+
+}
+.span2 img {
+	background: #CE3E26;
+	padding: 7px;
+	float: left;
+}
