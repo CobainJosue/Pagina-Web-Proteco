@@ -5,10 +5,9 @@ function ingresoFacebook(){
       var provider = new firebase.auth.FacebookAuthProvider();
       provider.addScope('public_profile');
       firebase.auth().signInWithPopup(provider).then(function(result){
-         var token =result.credencial.accesstoken;
-      $('#modalInicio').openModal();
+       $('#modalInicio').openModal();
       document.getElementById("MensajeBienvenida").innerHTML = "Te logeaste como: <b><u>" + result.user.displayName + "</u><b>";
-
+         //alert(result.user.displayName);
       }).catch(function (error){
          var errorCode=error.code;
          var errorMessage = error.message;
