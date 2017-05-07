@@ -15,8 +15,6 @@
 		<title>PROTECO</title>
 	</head>
 	<body ng-controller="cursosCtrl as cursos">
-
-
 		<div class="navbar-fixed">
 			<nav>
 				<ul id="entrar" class="dropdown-content">
@@ -44,16 +42,14 @@
 			</nav>
 		</div>
 		<br>
-		<center><h3>¡CHECA NUESTRAS REDES!</h3></center>
-		<div class="container row">
-			<div class="col l6 m8 s8">
-				<a class="twitter-timeline" data-width="500" data-height="500" data-theme="dark" href="https://twitter.com/proteco">Tweets by proteco</a> <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		
+	
+
+		<div class="parallax-container">
+				<div class="parallax"><img src="img/protecobn.png"></div>
 			</div>
-			<div class="col l6 m8 s8">
-				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fproteco%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-			</div>
-		</div>
-		<div class="row">
+
+				<div class="row">
 			<div class="col s12">
 				<div class="carousel">
 					<a class="carousel-item" href="#one!"><img src="img/python2.png"></a>
@@ -64,6 +60,21 @@
 				</div>
 			</div>
 		</div>
+
+		  <!-- Modal Trigger -->
+  <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+
 		<div class="container">
 			<h5>¡Busca el curso de tu interes!</h5>
 			<input ng-model="search" placeholder="curso">
@@ -89,6 +100,8 @@
 				
 			</div>
 		</div>
+
+
 	</body>
 	<script type="text/javascript">
 	$('.carousel').carousel();
