@@ -1,14 +1,12 @@
-var provider = new firebase.auth.GithubAuthProvider();
-provider.addScope('repo');
-
 document.getElementById('btn-github').addEventListener('click',githubSignin);
 
 
 function githubSignin() {
    
    if(!firebase.auth().currentUser){
-   firebase.auth().signInWithPopup(provider)
-   
+   var providerGithub = new firebase.auth.GithubAuthProvider();
+   providerGithub.addScope('repo');
+   firebase.auth().signInWithPopup(providerGithub)
    .then(function(result) {      
      $('#modalInicio').openModal();
       document.getElementById("MensajeBienvenida").innerHTML = "Te logeaste como: <b><u>" + result.user.displayName + "</u><b>";
@@ -21,7 +19,4 @@ function githubSignin() {
 }else{
    firebase.auth().signOut();
 }
-
-
-
 }
