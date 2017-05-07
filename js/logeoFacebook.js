@@ -1,26 +1,30 @@
-var provider = new firebase.auth.FacebookAuthProvider();
+document.getElementById('btn-facebook').addEventListener('click',ingresoFacebook);
 
-function facebookSignin() {
-   firebase.auth().signInWithPopup(provider)
-   
-   .then(function(result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
-      
-      console.log(token)
-      console.log(user)
-   }).catch(function(error) {
-      console.log(error.code);
-      console.log(error.message);
-   });
+function ingresoFacebook(){
+   if(!firebase.auth().currentUser){
+      var provider = new firebase.auth.FacebookAuthProvider();
+      provider.addScope('public_profile');
+      firebase.auth().signInWithPopup(provider).then(function(result){
+         var token =result.credencial.accesstoken;
+      $('#modalInicio').openModal();
+      document.getElementById("MensajeBienvenida").innerHTML = "Te logeaste como: <b><u>" + result.user.displayName + "</u><b>";
+
+      }).catch(function (error){
+         var errorCode=error.code;
+         var errorMessage = error.message;
+         var erroremail= error.email;
+         var credential = error.credential;
+         if(errorCode === 'auth/account-exists-with-different-credential'){
+            alert('Es el mismo usuario');
+         }
+
+      });
+
+
+
+   }else{
+      firebase.auth().signOut();
+   }
 }
 
-function facebookSignout() {
-   firebase.auth().signOut()
-   
-   .then(function() {
-      console.log('Signout successful!')
-   }, function(error) {
-      console.log('Signout failed')
-   });
-}
+
